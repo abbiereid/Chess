@@ -1,4 +1,4 @@
-abstract class Pawn {
+abstract class Pawn implements Piece {
     int points = 1;
 
 }

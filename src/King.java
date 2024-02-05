@@ -1,4 +1,4 @@
-abstract class King {
+abstract class King implements Piece {
 
 
 }

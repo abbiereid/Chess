@@ -1,5 +1,6 @@
-public class BlackKing extends King {
-    String imPath = "blackKing.png";
+public class WhiteRook extends Rook {
+    String imPath = "whiteRook.png";
+
     @Override
     public String getImPath() {
         return imPath;
