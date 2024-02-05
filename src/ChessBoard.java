@@ -8,7 +8,7 @@ public class ChessBoard extends JFrame {
     private static final int tileSize = 80;
     private static int index = 0;
 
-    private static final ArrayList<Piece> pieces = new ArrayList<>();
+    static final ArrayList<Piece> pieces = new ArrayList<>();
 
     public ChessBoard() {
         setTitle("Chess Board");
@@ -20,6 +20,7 @@ public class ChessBoard extends JFrame {
 
         add(pn);
         setVisible(true);
+
     }
 
     private void initializeBoard(JPanel chessboardPanel) {
@@ -35,10 +36,11 @@ public class ChessBoard extends JFrame {
                 if (p != null) {
                     ImageIcon icon = createImageIcon(p.getImPath());
                     if (icon != null) {
-                        JLabel label = null;
-                        label = new JLabel(icon);
+                        JLabel label = new JLabel(icon);
                         tile.add(label);
                     }
+                    p.setX(tile.getLocation().x);
+                    p.setY(tile.getLocation().y);
                 }
 
                 index++;
